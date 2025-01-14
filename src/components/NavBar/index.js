@@ -61,7 +61,7 @@ function Index() {
             <div className="absolute min-h-3 min-w-3 bg-red-500 rounded-full -top-3 -right-1"></div>
           </div>
         </div>
-        <button className="bg-transparent text-sm text-[#49557e] border py-2 px-6 rounded-full cursor-pointer hover:bg-[#fff4f2] duration-300 ease-out">
+        <button className="bg-transparent text-sm text-[#49557e] border py-2 px-6 rounded-full cursor-pointer hover:bg-orange-200 hover:text-stone-800 duration-300 ease-out">
           sign-sin
         </button>
       </div>

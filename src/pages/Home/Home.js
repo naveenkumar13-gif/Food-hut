@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from "react";
+import Header from "../../components/Header/index";
+import ExploreMenu from "../../components/ExploreMenu/index";
 
 function Home() {
+  const [category, setCategory] = useState("All");
   return (
-    <div>Home</div>
-  )
+    <div>
+      <Header />
+      <ExploreMenu category={category} setCategory={setCategory} />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
