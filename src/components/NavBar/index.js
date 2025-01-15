@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 
 function Index() {
-  const [menu, setMenu] = useState("menu");
+  const [menu, setMenu] = useState(null);
 
   return (
     <div className="py-5 flex justify-between items-center">
@@ -13,7 +13,7 @@ function Index() {
         <li
           className={
             menu === "home"
-              ? "pb-[2px]  border-b-2 border-[#49557e]   cursor-pointer"
+              ? "pb-[0px]  border-b-2 border-[#49557e]   cursor-pointer"
               : ""
           }
           onClick={() => setMenu("home")}
@@ -23,7 +23,7 @@ function Index() {
         <li
           className={
             menu === "menu"
-              ? "pb-[2px]  border-b-2 border-[#49557e] cursor-pointer"
+              ? "pb-[0px]  border-b-2 border-[#49557e] cursor-pointer"
               : ""
           }
           onClick={() => setMenu("menu")}
@@ -33,7 +33,7 @@ function Index() {
         <li
           className={
             menu === "mobile-app"
-              ? "pb-[2px]  border-b-2 border-[#49557e] cursor-pointer"
+              ? "pb-[0px]  border-b-2 border-[#49557e] cursor-pointer"
               : ""
           }
           onClick={() => setMenu("mobile-app")}
@@ -43,7 +43,7 @@ function Index() {
         <li
           className={
             menu === "contact-us"
-              ? "pb-[2px]  border-b-2 border-[#49557e] cursor-pointer"
+              ? "pb-[0px]  border-b-2 border-[#49557e] cursor-pointer"
               : ""
           }
           onClick={() => setMenu("contact-us")}

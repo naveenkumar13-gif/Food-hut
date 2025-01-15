@@ -4,13 +4,14 @@ import { menu_list } from "../../assets/frontend_assets/assets";
 function index({ category, setCategory }) {
   return (
     <div className="flex flex-col gap-4" id="menu">
-      <h1 className="text-[#262626] font-semibold">Explore menu</h1>
+      <h2 className="text-2xl font-semibold mb-6 relative group cursor-pointer">
+        Explore menu
+        <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-red-500 transition-all duration-700 group-hover:w-[12%]"></span>
+      </h2>
       <p className="max-w-[60%] text-[#808080]">
         Dive into a world of culinary delights with our Explore Menu. From
         mouth-watering appetizers to delectable desserts, our menu offers a wide
-        range of options to satisfy every craving. Whether you're in the mood
-        for something spicy, sweet, or savory, you'll find it all here. Enjoy a
-        seamless ordering experience and discover new flavors with every click.
+        range of options to satisfy every craving.
       </p>
       <div className="flex  items-center  justify-between my-5  text-center  cursor-pointer">
         {menu_list.map((item, index) => (
