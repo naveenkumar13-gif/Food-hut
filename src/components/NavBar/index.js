@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 
-function Index() {
+function Index({ setLogin }) {
   const [menu, setMenu] = useState(null);
 
   return (
-    <div className="py-5 flex justify-between items-center">
-      <div className="w-[15%] h-full">
+    <div className="py-5 flex justify-between items-center max-lg:py-4">
+      <div className="w-[15%] h-full max-lg:w-[20%]">
         <img src={assets.logo} alt="logo" className="w-full" />
       </div>
-      <ul className="flex gap-5 text-xl text-[#49557e]  cursor-pointer">
+      <ul className="flex gap-5 text-xl text-[#49557e]  cursor-pointer max-xl:gap-3 max-lg:hidden">
         <li
           className={
             menu === "home"
@@ -51,7 +51,7 @@ function Index() {
           contact-us
         </li>
       </ul>
-      <div className="flex justify-between gap-8  items-center ">
+      <div className="flex justify-between gap-8  items-center max-xl:gap-4 max-lg:hidden ">
         <div>
           <img src={assets.search_icon} alt="logo" />
         </div>
@@ -61,7 +61,7 @@ function Index() {
             <div className="absolute min-h-3 min-w-3 bg-red-500 rounded-full -top-3 -right-1"></div>
           </div>
         </div>
-        <button className="bg-transparent text-sm text-[#49557e] border py-2 px-6 rounded-full cursor-pointer hover:bg-orange-200 hover:text-stone-800 duration-300 ease-out">
+        <button className="bg-transparent text-sm text-[#49557e] border py-2 px-6 rounded-full cursor-pointer hover:bg-orange-200 hover:text-stone-800 duration-300 ease-out" onClick={()=>setLogin(true)}>
           sign-sin
         </button>
       </div>

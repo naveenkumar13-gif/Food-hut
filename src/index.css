@@ -7,3 +7,7 @@
 html {
   font-family: "Roboto", serif;
 }
+
+.parent:hover > .child:not(:hover) {
+  @apply: filter blur-sm opacity-50;
+}
