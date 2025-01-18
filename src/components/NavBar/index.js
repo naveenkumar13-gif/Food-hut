@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Index({ setLogin }) {
   const [menu, setMenu] = useState(null);
+  const cart = useSelector((store) => store.cart.cart);
 
   return (
-    <div className="py-5 flex justify-between items-center max-lg:py-4">
+    <div className="py-5 flex justify-between items-center max-lg:py-4 ">
       <div className="w-[15%] h-full max-lg:w-[20%]">
-        <img src={assets.logo} alt="logo" className="w-full" />
+        <Link to="/">
+          <img src={assets.logo} alt="logo" className="w-full" />
+        </Link>
       </div>
       <ul className="flex gap-5 text-xl text-[#49557e]  cursor-pointer max-xl:gap-3 max-lg:hidden">
         <li
@@ -56,14 +61,24 @@ function Index({ setLogin }) {
           <img src={assets.search_icon} alt="logo" />
         </div>
         <div className="relative">
-          <div>
-            <img src={assets.basket_icon} alt="logo" />
-            <div className="absolute min-h-3 min-w-3 bg-red-500 rounded-full -top-3 -right-1"></div>
-          </div>
+          <Link to={"/cart"}>
+            <div>
+              <img src={assets.basket_icon} alt="logo" />
+              <div className="absolute min-h-3 min-w-3  text-red-400   rounded-full -top-5 right-[6px]">
+                {cart?.length}
+              </div>
+            </div>
+          </Link>
         </div>
-        <button className="bg-transparent text-sm text-[#49557e] border py-2 px-6 rounded-full cursor-pointer hover:bg-orange-200 hover:text-stone-800 duration-300 ease-out" onClick={()=>setLogin(true)}>
-          sign-sin
-        </button>
+
+        {
+          <button
+            className="bg-transparent text-sm text-[#49557e] border py-2 px-6 rounded-full cursor-pointer hover:bg-orange-200 hover:text-stone-800 duration-300 ease-out"
+            onClick={() => setLogin(true)}
+          >
+            sign-in
+          </button>
+        }
       </div>
     </div>
   );

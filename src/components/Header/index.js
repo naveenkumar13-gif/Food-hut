@@ -3,7 +3,7 @@ import "./index.css";
 
 function index() {
   return (
-    <div className="header-background">
+    <div className="header-background" id="home">
       <div
         className="flex flex-col absolute items-start gap-4 max-w-[50%] bottom-[15%] left-[20%]  max-md:items-center  max-lg:bottom-[25%]  max-lg:max-w-[65%] max-sm:bottom-[35%] "
         data-aos="fade-down"

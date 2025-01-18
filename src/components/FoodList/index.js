@@ -1,8 +1,24 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../Store/CartSlice";
 
 function Index({ id, name, image, price, description, category }) {
   const [itemCount, setItemCount] = useState(0);
+  const dispatch = useDispatch();
+
+  function handleAddItem() {
+    const newItem = {
+      id: Math.floor(Math.random() * 10),
+      name,
+      image,
+      price,
+      description,
+      quantity: 1,
+    };
+    dispatch(addItem(newItem));
+    console.log(newItem);
+  }
   return (
     <div className="w-full m-auto shadow-md hover:-translate-y-2  duration-500">
       <div
@@ -21,7 +37,7 @@ function Index({ id, name, image, price, description, category }) {
             className="w-[15%] ml-4 "
             src={assets.add_icon_white}
             alt="assest_icon"
-            onClick={() => setItemCount((curr) => curr + 1)}
+            onClick={handleAddItem}
           />
         ) : (
           <div className=" w-[15%] flex items-center gap-3 my-2 ">

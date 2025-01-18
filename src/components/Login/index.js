@@ -3,12 +3,21 @@ import { assets } from "../../assets/frontend_assets/assets";
 
 function Index({ setLogin }) {
   const [current, setCurrent] = useState("sign up");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
   return (
     <div
       className=" absolute z-10 w-full h-full bg-[#00000090] backdrop-blur-sm grid"
       data-aos="fade"
     >
-      <form className="self-center justify-self-center w-[400px] flex flex-col justify-center gap-6 bg-white text-[#808080] py-6 px-8 rounded-lg text-lg">
+      <form
+        className="self-center justify-self-center w-[400px] flex flex-col justify-center gap-6 bg-white text-[#808080] py-6 px-8 rounded-lg text-lg"
+        onSubmit={handleSubmit}
+      >
         <div className="flex justify-between items-center text-black">
           <h2>{current}</h2>
           <img
@@ -25,6 +34,8 @@ function Index({ setLogin }) {
               required
               type="text"
               className="outline-none border border-[#c9c9c9c9] p-2 rounded"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           )}
 
@@ -32,12 +43,16 @@ function Index({ setLogin }) {
             placeholder="Your Email"
             required
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="outline-none border border-[#c9c9c9c9] p-2 rounded"
           />
           <input
             placeholder="Your Password"
             required
             type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className="outline-none border border-[#c9c9c9c9] p-2 rounded"
           />
         </div>
