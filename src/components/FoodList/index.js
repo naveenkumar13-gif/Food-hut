@@ -34,7 +34,7 @@ function Index({ id, name, image, price, description, category }) {
         />
         {!itemCount ? (
           <img
-            className="w-[15%] ml-4 "
+            className="w-[15%] ml-4 cursor-pointer "
             src={assets.add_icon_white}
             alt="assest_icon"
             onClick={handleAddItem}
