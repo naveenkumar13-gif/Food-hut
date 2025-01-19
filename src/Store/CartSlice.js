@@ -43,6 +43,6 @@ export const getTotalQuantity = (store) =>
   store.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
 
 export const getTotalPrice = (store) =>
-  store.cart.cart.reduce((sum, item) => sum + item.price, 0);
+  store.cart.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
 // 'reslect
