@@ -89,17 +89,17 @@ function CartItem() {
           <div className="flex-grow flex flex-col gap-5">
             <h2 className="text-3xl font-medium">Cart Totals</h2>
             <div>
-              <div className="flex justify-between text-[#555]">
+              <div className="flex justify-between text-[#555] my-3">
                 <p>SubTotals</p>
                 <p> ${totalPrice}</p>
               </div>
               <hr className="h-[1px] bg-[#e2e2e2] border-none" />
-              <div className="flex justify-between text-[#555]">
+              <div className="flex justify-between text-[#555] my-3">
                 <p>Delivery Fees</p>
                 <p>{2}</p>
               </div>
               <hr className="h-[1px] bg-[#e2e2e2] border-none" />
-              <div className="flex justify-between text-[#555]">
+              <div className="flex justify-between text-[#555] my-3">
                 <p>Total</p>
                 <p> ${totalPrice + 3}</p>
               </div>
@@ -114,13 +114,14 @@ function CartItem() {
           </div>
           <div className="flex-1">
             <p className="text-[#555]">
-              if you have a promo code,Enter it here...
+              if you have a <span className="text-xl">Promo Code</span> Enter it
+              here...
             </p>
             <div className="mt-3 flex justify-between items-center bg-[#eaeaea] rounded">
               <input
                 type="text"
-                placeholder="promo-code"
-                className="bg-transparent border-none outline-none px-2"
+                placeholder="WELCOME10"
+                className="bg-transparent border-none outline-none px-2 my-1"
               />
               <button className="w-[150px] py-3 px-1 border-none text-white rounded bg-black">
                 Submit

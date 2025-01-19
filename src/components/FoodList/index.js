@@ -24,7 +24,7 @@ function Index({ id, name, image, price, description, category }) {
       <div
         className="overflow-hidden"
         data-aos="flip-up"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         data-aos-delay={id * 100}
       >
         <img

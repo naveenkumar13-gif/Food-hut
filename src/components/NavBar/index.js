@@ -23,7 +23,7 @@ function Index({ setLogin }) {
           }
           onClick={() => setMenu("home")}
         >
-          home
+          <a href="#home">home</a>
         </li>
         <li
           className={
@@ -33,7 +33,7 @@ function Index({ setLogin }) {
           }
           onClick={() => setMenu("menu")}
         >
-          menu
+          <a href="#menu">menu</a>
         </li>
         <li
           className={
@@ -41,9 +41,9 @@ function Index({ setLogin }) {
               ? "pb-[0px]  border-b-2 border-[#49557e] cursor-pointer"
               : ""
           }
-          onClick={() => setMenu("mobile-app")}
+          onClick={() => setMenu("app-download")}
         >
-          mobile-app
+          <a href="#app-download">mobile-app</a>
         </li>
         <li
           className={
@@ -53,7 +53,7 @@ function Index({ setLogin }) {
           }
           onClick={() => setMenu("contact-us")}
         >
-          contact-us
+          <a href="#footer">contact-us</a>
         </li>
       </ul>
       <div className="flex justify-between gap-8  items-center max-xl:gap-4 max-lg:hidden ">

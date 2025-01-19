@@ -6,8 +6,9 @@
 
 html {
   font-family: "Roboto", serif;
+  scroll-behavior: smooth;
 }
 
-.parent:hover > .child:not(:hover) {
-  @apply: filter blur-sm opacity-50;
+input {
+  @apply w-full p-2 rounded border border-[#c5c5c5] outline-red-500 mb-4;
 }

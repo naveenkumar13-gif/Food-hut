@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 
 function Index({ setLogin }) {
-  const [current, setCurrent] = useState("sign up");
+  const [current, setCurrent] = useState("Login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -59,28 +59,28 @@ function Index({ setLogin }) {
         <button className="border-none p-3 rounded text-white bg- bg-red-500 text-lg">
           {current === "sign up" ? "create Account" : "login"}
         </button>
-        <div className="flex items-start gap-2">
-          <input required type="checkbox" />
-          <p className=" -mt-2">
+        <div className="flex items-center  gap-2">
+          <input required type="checkbox" className="flex-1" />
+          <p className="  text-sm">
             By counting ,i agree to the terms of use & privacy policy{" "}
           </p>
         </div>
-        {current === " login" ? (
+        {current === "login" ? (
           <p>
-            create a new account ?{" "}
+            Create a new account?
             <span
               onClick={() => setCurrent("sign up")}
-              className="cursor-pointer text-red-500 font-medium"
+              className="cursor-pointer text-red-500 font-medium mx-1 "
             >
               Click here
             </span>
           </p>
         ) : (
           <p>
-            Already have Account ?{" "}
+            Already have Account ?
             <span
               onClick={() => setCurrent("login")}
-              className="cursor-pointer text-red-500 font-medium"
+              className="cursor-pointer text-red-500 font-medium mx-1"
             >
               Login here
             </span>
